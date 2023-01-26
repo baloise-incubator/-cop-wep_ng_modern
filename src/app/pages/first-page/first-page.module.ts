@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from 'src/app/shared/shared.module';
+import {
+  BalHeadingModule,
+  BalSpinnerModule,
+} from '@baloise/design-system-components-angular';
+import { GreetingComponent } from 'src/app/shared/components/greeting/greeting.component';
 import { FirstPageComponent } from './first-page.component';
 
 @NgModule({
   declarations: [FirstPageComponent],
   imports: [
-    SharedModule,
+    BalHeadingModule,
+    BalSpinnerModule,
+    GreetingComponent,
     RouterModule.forChild([
       {
         path: '',

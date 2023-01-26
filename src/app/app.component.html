@@ -1,13 +1,16 @@
-<bal-app class="has-sticky-footer">
-  <header>
-    <!-- Header content -->
+<bal-app>
+  <header class="has-background-primary py-normal">
+    <div class="container is-flex fg-small">
+      <a class="is-link is-inverted" routerLink="/first-component" routerLinkActive="active" ariaCurrentWhenActive="page">
+        First Component
+      </a>
+      <a class="is-link is-inverted" routerLink="/second-component" routerLinkActive="active" ariaCurrentWhenActive="page">
+        Second Component
+      </a>
+    </div>
   </header>
-  <main class="container">
+  <main class="container py-large">
     <!-- Your application content -->
-    <bal-heading>Hello World!</bal-heading>
-    <bal-button>Button</bal-button>
+    <router-outlet></router-outlet>
   </main>
-  <bal-footer>
-    <!-- Footer content -->
-  </bal-footer>
 </bal-app>

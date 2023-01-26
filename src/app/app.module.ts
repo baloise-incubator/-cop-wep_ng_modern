@@ -5,8 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstPageModule } from './pages/first-page/first-page.module';
-import { SecondPageModule } from './pages/second-page/second-page.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,8 +13,6 @@ import { SecondPageModule } from './pages/second-page/second-page.module';
     AppRoutingModule,
     HttpClientModule,
     BalCoreModule.forRoot(),
-    FirstPageModule,
-    SecondPageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

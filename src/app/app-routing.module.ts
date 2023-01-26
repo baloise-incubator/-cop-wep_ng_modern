@@ -4,16 +4,16 @@ import { RouterModule, Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: 'first-component',
-    loadChildren: () =>
-      import('./pages/first-page/first-page.module').then(
-        (m) => m.FirstPageModule
+    loadComponent: () =>
+      import('./pages/first-page/first-page.component').then(
+        (m) => m.FirstPageComponent
       ),
   },
   {
     path: 'second-component',
-    loadChildren: () =>
-      import('./pages/second-page/second-page.module').then(
-        (m) => m.SecondPageModule
+    loadComponent: () =>
+      import('./pages/second-page/second-page.component').then(
+        (m) => m.SecondPageComponent
       ),
   },
   {

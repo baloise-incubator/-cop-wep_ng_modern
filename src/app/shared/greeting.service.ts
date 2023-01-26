@@ -15,9 +15,9 @@ export interface GreetingResponse {
 export class GreetingService {
   constructor(private http: HttpClient) {}
 
-  fetchRandom = (): Observable<GreetingResponse> => {
+  fetchRandom(): Observable<GreetingResponse> {
     return this.http.get<GreetingResponse>(
       'https://www.greetingsapi.com/random'
     );
-  };
+  }
 }

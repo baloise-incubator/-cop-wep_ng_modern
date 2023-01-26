@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { GreetingResponse, GreetingService } from 'src/app/greeting.service';
+import { GreetingResponse, GreetingService } from 'src/app/shared/greeting.service';
 
 @Component({
   selector: 'app-second-page',

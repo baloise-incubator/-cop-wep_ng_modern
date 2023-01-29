@@ -4,14 +4,14 @@ export const routes: Routes = [
   {
     path: 'first-component',
     loadComponent: () =>
-      import('./pages/first-page/first-page.component').then(
+      import('./pages/first-page.component').then(
         (m) => m.FirstPageComponent
       ),
   },
   {
     path: 'second-component',
     loadComponent: () =>
-      import('./pages/second-page/second-page.component').then(
+      import('./pages/second-page.component').then(
         (m) => m.SecondPageComponent
       ),
   },

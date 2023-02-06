@@ -3,12 +3,8 @@ import {
   BalHeadingModule,
   BalSpinnerModule,
 } from '@baloise/design-system-components-angular';
-import { Observable } from 'rxjs';
 import { GreetingComponent } from 'src/app/shared/components/greeting/greeting.component';
-import {
-  GreetingResponse,
-  GreetingService,
-} from 'src/app/shared/greeting.service';
+import { fetchRandomGreeting } from 'src/app/shared/greeting';
 
 @Component({
   selector: 'app-second-page',
@@ -16,12 +12,6 @@ import {
   standalone: true,
   imports: [BalHeadingModule, BalSpinnerModule, GreetingComponent],
 })
-export class SecondPageComponent implements OnInit {
-  getRandomGreeting$!: Observable<GreetingResponse>;
-
-  constructor(private greeting: GreetingService) {}
-
-  ngOnInit(): void {
-    this.getRandomGreeting$ = this.greeting.fetchRandom();
-  }
+export class SecondPageComponent {
+  getRandomGreeting$ = fetchRandomGreeting();
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { BalHeadingModule } from '@baloise/design-system-components-angular';
 
 @Component({
@@ -6,7 +6,13 @@ import { BalHeadingModule } from '@baloise/design-system-components-angular';
   templateUrl: './greeting.component.html',
   standalone: true,
   imports: [BalHeadingModule],
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GreetingComponent {
   @Input() greeting = '';
+
+  title() {
+    console.log('Change Detection');
+    return 'CoP Web';
+  }
 }

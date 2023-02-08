@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {
   BalHeadingModule,
   BalSpinnerModule,
@@ -11,6 +11,7 @@ import { fetchRandomGreeting } from 'src/app/shared/greeting';
   templateUrl: './second-page.component.html',
   standalone: true,
   imports: [BalHeadingModule, BalSpinnerModule, GreetingComponent],
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SecondPageComponent {
   getRandomGreeting$ = fetchRandomGreeting();

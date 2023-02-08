@@ -1,4 +1,8 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+} from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -7,5 +11,6 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [RouterModule],
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {}

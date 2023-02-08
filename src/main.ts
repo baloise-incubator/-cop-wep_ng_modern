@@ -5,7 +5,7 @@ import { provideRouter } from '@angular/router';
 import { BalCoreModule } from '@baloise/design-system-components-angular';
 
 import { routes } from './app/routes';
-import { AppComponent } from './app/app.component';
+import { AppComponent } from './app/components/app.component';
 
 bootstrapApplication(AppComponent, {
   providers: [

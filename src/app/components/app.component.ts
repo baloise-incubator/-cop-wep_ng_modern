@@ -36,6 +36,9 @@ import { RouterModule } from '@angular/router';
       </header>
       <main class="container py-large">
         <router-outlet></router-outlet>
+        <div class="is-flex is-justify-content-center py-large">
+          <img width="400" src="assets/structure.svg" alt="structure">
+        </div>
       </main>
     </bal-app>
   `,

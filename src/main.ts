@@ -1,7 +1,19 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { provideHttpClient } from '@angular/common/http';
+import { enableProdMode, importProvidersFrom, NgZone } from '@angular/core';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
+import { BalCoreModule } from '@baloise/design-system-components-angular';
 
-import { AppModule } from './app/app.module';
+import { routes } from './app/routes';
+import { AppComponent } from './app/components/app.component';
 
+// reduces change detection validation in dev mode cycle
+// enableProdMode();
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideHttpClient(),
+    provideRouter(routes),
+    importProvidersFrom(BalCoreModule.forRoot()),
+  ],
+});

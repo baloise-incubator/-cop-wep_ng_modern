@@ -1,9 +1,0 @@
-<bal-heading>Second Page</bal-heading>
-
-<div *ngIf="getRandomGreeting$ | async as greeting; else loading">
-  <app-greeting [greeting]="greeting.greeting"></app-greeting>
-</div>
-
-<ng-template #loading>
-  <bal-spinner></bal-spinner>
-</ng-template>
